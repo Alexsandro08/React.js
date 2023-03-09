@@ -1,0 +1,17 @@
+
+
+
+import React from "react";
+import Externo from "./componetes/externo"; // Importando o componete criado
+import Header from "./componetes//header" // Importando o componete criado
+
+
+export default function app(){
+  return(
+      <>
+      <Externo/> //Chamando o componete
+      <Header/> //Chamando o componete
+      </>
+)
+
+}

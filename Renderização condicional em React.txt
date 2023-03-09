@@ -1,0 +1,92 @@
+import React,{useState} from "react"
+import './App.css'
+
+export default function App(){
+
+  const [log, setLog]=useState(false)
+  
+  const msg=()=>{
+    return 'LoginOn'
+  }
+
+  const msgOff=()=>{
+    return "LoginOff"
+  }
+
+ <p>{log?msg():msgOff()}</p>
+    <button onClick={()=> setLog(!log)}>{log?"LoginOff":"Login"}</button> 
+
+
+(? = if)
+(: = else)
+
+----------------------------------------------------
+
+ const tempo=()=>{
+
+    const hora = 22
+
+    if(hora >= 5 && hora <= 12){
+      return <p>Bom dia!</p>
+    } 
+    else if(hora >= 13 && hora <= 18){
+      return <p>Boa tarde!</p>
+    } 
+    else if(hora >= 19 && hora <= 23){
+      return <p>Boa noite!</p>
+    }
+    else{
+      return <p>Boa madrugada!</p>
+    }
+
+
+  }
+----------------------------------------------------
+
+import React,{useState} from "react"
+
+
+export default function App(){
+
+  const [cor, setCor]=useState(1)
+  
+
+  const red ={color:'#f00'}
+  const green = {color:'#0f0'}
+  const blue ={color:'#7fffd4'}
+
+
+  
+  const retCor=(c)=>{
+    if(c == 1){
+      return red
+    }
+    else if(c == 2){
+      return green
+    }
+    else{
+      return blue
+    }
+  }
+
+  
+ const muda=()=>{
+  setCor(cor +1)
+  if(cor > 2){
+    setCor(1)
+  }
+
+  }
+
+  setInterval(muda,1000) //mudar cor com intervalo de tempo
+
+  return(
+    <>
+    <h1 style={retCor(cor)}>
+      Testando
+    </h1>
+    <button onClick={()=>muda()}>Mudar cor</button>
+
+    </>
+  )
+}

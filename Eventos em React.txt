@@ -1,0 +1,39 @@
+(Arquivo App)
+
+import React, {useState} from 'react'
+import './App.css'
+import Led from './componetes/evento'
+
+
+
+export default function App(){
+  
+  const[ligado, setLigar] =useState(false)
+  
+  return(
+    <>
+    <Led ligado={ligado} setLigar={setLigar}/>
+    
+    </>
+
+  )
+}
+
+------------------------------------
+(Arquivo evento)
+
+import React from 'react'
+import LedOn  from './imgs/led_on.png'
+import LedOff from './imgs/led_off.png'
+
+export default function Led(props){
+
+
+    return(
+        <>
+        <img src={props.ligado?LedOn:LedOff}/>
+        <button onClick={()=> props.setLigar(!props.ligado)}>{props.ligado?'Desligar':'Ligar'}</button>
+        </>
+    )
+
+}

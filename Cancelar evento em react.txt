@@ -1,0 +1,11 @@
+  
+
+ const cancelar=(obj)=>{
+    return obj.preventDefault()
+
+  }
+
+
+
+
+<a href='https:youtube.com' target="_blank"  onClick={(e)=>cancelar(e)}>Link</a>

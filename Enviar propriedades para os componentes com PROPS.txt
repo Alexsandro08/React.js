@@ -1,0 +1,35 @@
+(Arquivo dados)
+
+import React from "react";
+
+export default function dados(props){
+    return(
+        <section>
+            <p>Teste01:{props.test}</p>
+            <p>Teste02:{props.test2}</p>
+            <p>Teste03:{props.test3}</p>
+        </section>
+    )
+}
+
+
+
+---------------------------------
+(Arquivo externo)
+import React from "react";
+import extras from './imgs/imagem01.jpg'
+import Dados from "./dados";
+
+export default function externo(){
+  const testando01= ' funcionando'
+  const testando02 = ' funcionando'
+  const testando03 = ' funcionando'
+  
+    return(
+      <header>
+        <img src={extras}/>
+        <h1>Testando</h1>
+       <Dados  test={testando01} test2={testando02} test3={testando03}/>
+     </header>
+    )
+}

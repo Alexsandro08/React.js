@@ -1,0 +1,56 @@
+(Arquivo app.js)// principal
+
+
+import React,{useState} from 'react'
+import './App.css'
+import Numero from "./componetes/Num"
+import Num from "./componetes/numero"
+
+
+
+
+
+export default function App(){
+ 
+  const[test, setTest]=useState(0)
+  
+  return(
+      <>
+        <p>Valor do state Test em App:{test}</p>
+        <Numero test={test} setTest={setTest}/>
+        <Num test={test} setTest={setTest}/>
+
+      </>
+)
+
+}
+
+-----------------------------------------
+Arquivo Num.js
+
+import React from "react"
+
+export default function Num(props){
+
+    return(
+    <p>
+      <p>Valor do state Test em Num: {props.test}</p>
+      <button onClick={()=>props.setTest(props.test+10)}>Adição</button>
+    </p>
+    )
+}
+
+--------------------------------------------
+Arquivo numero.js
+
+import React from "react"
+
+
+export default function numero(props){
+    return(
+        <p>
+        
+        <button onClick={()=>props.setTest(props.test-10)}>Menos</button>
+      </p>
+    )
+}

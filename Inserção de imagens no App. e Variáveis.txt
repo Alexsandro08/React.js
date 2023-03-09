@@ -1,0 +1,40 @@
+import React from "react"; // extrutura do react
+import extras from './imagens/imgs/imagem01.jpg' // importando as imagens do servidor 
+
+
+export default function app(){
+  const principal= ()=>{
+    return('React.js')
+
+  }
+
+  const test = 'Testando'
+  const test02 = 'Testando variaveis em react'  
+
+
+  return(
+      <>
+      <header>
+      <h1>
+        {'Titulo: ' + principal()}
+      </h1>
+
+      <br/>
+
+      <p>
+
+        {test} // adicionando variaveis usando chaves
+      </p>
+
+      <p>
+        {test02}
+      </p>
+      </header>
+
+      <div>
+        <img src={extras} /> imagens do servidor (interna)
+        <img src="/img/imagem02.jpg"/> imagens da pasta publica (externa)
+      </div>
+      </>
+    )
+}

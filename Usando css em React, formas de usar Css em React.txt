@@ -1,0 +1,71 @@
+(Css inline)
+
+
+import React from "react";
+
+
+
+
+export default function app(){
+ 
+  
+  return(
+      <>
+      <h1 style={{color: 'red', fontFamily:'cursive', fontSize:'3em'}}>Titulo</h1> // usar camelCase
+      <h2>Sub-titulo</h2>
+      <p>Testando CSS em react.js</p>
+      </>
+)
+
+}
+
+------------------------------------
+(Com constantes)
+
+ const destaques ={
+    color: 'blue',
+    fontSize:'2em',
+    fontFamily:'Arial,sans-sarif'
+
+  }
+ 
+  
+  return(
+      <>
+      <h1 style={{color: 'red', fontFamily:'cursive', fontSize:'3em'}}>Titulo</h1>
+      <h2 style={destaques}>Sub-titulo</h2>
+      <p>Testando CSS em react.js</p>
+      </>
+)
+
+----------------------------------------------
+(Css externo)
+
+import React from "react";
+import './App.css'
+
+
+
+
+export default function app(){
+
+  const destaques ={
+    color: 'blue',
+    fontSize:'2em',
+    fontFamily:'Arial,sans-sarif'
+
+  }
+ 
+  
+  return(
+      <>
+      <section className="container">
+      <h1 style={{color: 'red', fontFamily:'cursive', fontSize:'3em'}}>Titulo</h1>
+      <h2 style={destaques}>Sub-titulo</h2>
+      <p className="text">Testando CSS em react.js</p>
+      <a href="#">Link Vazio</a>
+      </section>
+      </>
+)
+
+}
